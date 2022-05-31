@@ -1,0 +1,67 @@
+/* ============ GERAL ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem == 10px */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+/* ============ SIDEBAR ==================== */
+
+#sidebar {
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+
+  display: fixed;
+}
+
+
+#sidebar .title h1 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2.2rem;
+  
+ 
+  background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+  color: white;
+  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+#sidebar .container {
+  border: 1px solid lightgray;
+  width: 16%;
+  height: 100%;
+}
+
+
+#sidebar .container img {
+  width: 100%;
+}
+
+#sidebar ul li {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+
+  padding-left: 2.4rem;
+  margin-bottom: 0.9rem;
+
+  border-bottom: 1px solid lightgrey;
+}
+
