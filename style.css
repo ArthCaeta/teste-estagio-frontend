@@ -17,11 +17,11 @@ html, body {
 /* ============ SIDEBAR ==================== */
 
 #sidebar {
-  border: 1px solid red;
+  border: 1px solid lightgray;
+  width: 16%;
   height: 100%;
-  width: 100%;
 
-  display: fixed;
+  position: fixed;
 }
 
 
@@ -29,24 +29,18 @@ html, body {
   width: 100%;
   padding-left: 2rem;
   padding-right: 2.2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   
  
   background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
   color: white;
   
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.5rem;
 }
-
-#sidebar .container {
-  border: 1px solid lightgray;
-  width: 16%;
-  height: 100%;
-}
-
 
 #sidebar .container img {
   width: 100%;
@@ -54,7 +48,6 @@ html, body {
 
 #sidebar ul li {
   font-family: 'Quicksand';
-  font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.9rem;
@@ -65,3 +58,64 @@ html, body {
   border-bottom: 1px solid lightgrey;
 }
 
+/* ============ MAIN ==================== */
+
+#main header {
+  width: 84%;
+  padding: 0.2rem;
+
+  background: hsla(20, 82%, 96%, 1);
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 3rem;
+  margin-left: 16%;
+
+  padding-left: 3.6rem ;
+
+}
+
+#main header h3 {
+  font-family: 'Roboto';
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+#main header p.one {
+  font-family: 'Roboto';
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+#main header p {
+  font-family: 'Roboto';
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  padding-bottom: 0.4rem;
+}
+
+#main .profile img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+}
+
+#main .profile {
+  display: flex;
+  justify-content: center; 
+  margin-right: 5rem;
+}
+
+#main .texto {
+  display: flex;
+  flex-direction: column;
+}
+
+#main p.two {
+  text-align: end;
+}
