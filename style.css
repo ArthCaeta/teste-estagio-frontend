@@ -10,10 +10,19 @@
   font-size: 62.5%; /* 1rem == 10px */
 }
 
+.wrapper {
+ 
+  width: 84%;
+  height: 100%;
+  margin-left: 16%;
+  padding-left: 4.5rem;
+}
+
 html, body {
   height: 100%;
   width: 100%;
 }
+
 /* ============ SIDEBAR ==================== */
 
 #sidebar {
@@ -42,7 +51,7 @@ html, body {
   line-height: 3.5rem;
 }
 
-#sidebar .container img {
+#sidebar .menu img {
   width: 100%;
 }
 
@@ -53,12 +62,13 @@ html, body {
   line-height: 1.9rem;
 
   padding-left: 2.4rem;
+  padding-bottom: 0.9rem;
   margin-bottom: 0.9rem;
 
   border-bottom: 1px solid lightgrey;
 }
 
-/* ============ MAIN ==================== */
+/* ============ MAIN (HEADER) ==================== */
 
 #main header {
   width: 84%;
@@ -67,7 +77,6 @@ html, body {
   background: hsla(20, 82%, 96%, 1);
 
   display: flex;
-  position: relative;
   align-items: center;
   gap: 3rem;
   margin-left: 16%;
@@ -119,3 +128,100 @@ html, body {
 #main p.two {
   text-align: end;
 }
+
+/* ============ SUB-HEADER ==================== */
+
+#sub-header .container {
+  display: flex;
+  align-items: center;
+}
+
+#sub-header h2 {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
+  color: hsla(21, 83%, 58%, 1);
+  width: 98%;
+
+  
+}
+
+#sub-header .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  gap: 0.5rem;
+
+
+ 
+  padding-right: 4.5rem;
+
+}
+
+#sub-header span p {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+
+  color: hsla(21, 83%, 58%, 1);
+
+}
+
+
+
+#sub-header button {
+  border: 0;
+}
+
+/* ============ CONTENTS ==================== */
+
+#contents .details {
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.02rem;
+  overflow-y: scroll;
+
+
+  border: 1px solid hsla(0, 0%, 93%, 1);
+  width: 25%;
+  
+
+  display: flex;
+  flex-direction: column;
+
+
+  margin-left: 80rem;
+  margin-top: -44rem;
+}
+
+#contents .details::-webkit-scrollbar {
+  width: 1rem;
+  background-color: darkgrey;
+}
+
+#contents .details h2 {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: hsl(0, 0%, 36%);
+  
+
+  background: hsla(20, 82%, 96%, 1);
+}
+
+#contents .details p, ul {
+  padding: 2.3rem;
+}
+
+
