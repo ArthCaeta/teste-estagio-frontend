@@ -16,15 +16,17 @@
   font-size: 62.5%; /* 1rem == 10px */
 }
 
+
 .wrapper {
- 
   width: 84%;
   height: 100%;
   margin-left: 16%;
-  padding-left: 4.5rem;
+  padding-left: 2.3%;
+  padding-right: 2.3%;
 }
 
-html, body {
+html, 
+body {
   height: 100%;
   width: 100%;
   
@@ -190,13 +192,23 @@ html, body {
 
 /* ============ CONTENTS - DETAILS ==================== */
 
+#contents .info-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+
+
 #contents .details {
   font-family: 'Quicksand';
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.4rem;
   letter-spacing: 0.02rem;
-  overflow-y: scroll;
 
 
   border: 1px solid var(--light-grey);
@@ -206,14 +218,6 @@ html, body {
   display: flex;
   flex-direction: column;
 
-
-  margin-left: 80rem;
-  margin-top: -44rem;
-}
-
-#contents .details::-webkit-scrollbar {
-  width: 1rem;
-  background-color: darkgrey;
 }
 
 #contents .details h3 {
@@ -239,8 +243,8 @@ html, body {
 /* ============ CONTENTS - RESUME ==================== */
 
 #contents #resume {
-  width: 97.7%;
-  height: 50%;
+  width: 100%;
+  height: auto;
 
   margin-right: 5rem;
   margin-top: 3rem;
@@ -259,7 +263,7 @@ html, body {
   border: 1px solid var(--light-grey); 
 }
 
-#contents span h3 {
+#contents #resume span h3 {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 2rem;
@@ -282,4 +286,128 @@ html, body {
   padding-inline: 1.6rem;
   padding-bottom: 3rem;
   padding-top: 1rem;
+}
+
+/* ============ CONTENTS - DISCUSSION ==================== */
+
+#contents #discussion {
+  margin-top: 3rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 3px 3px 0px 0px;
+}
+
+#contents #discussion span h3 {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+
+  background: var(--light-orange);
+  border: 1px solid var(--light-grey);
+}
+
+#contents #discussion .p1 {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+
+  padding-top: 1.5rem;
+
+  text-align: center;
+
+  color: var(--orange);
+}
+
+#contents #discussion .p2 {
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  text-align: center;
+
+  padding-top: 3.5rem;
+  padding-inline: 21.6rem;
+}
+
+#contents #discussion .figures {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+
+  padding-top: 2.7rem;
+}
+
+#contents #discussion .topic-button button {
+  border: none;
+
+
+  padding-block: 1.5rem;
+  padding-inline: 46.3rem;
+}
+
+#contents #discussion .line {
+  margin-inline: 1.5rem;
+  border: 1px solid red;
+}
+
+#contents #discussion .questions {
+  margin-block: 1.7rem;
+  margin-inline: 1.5rem;
+  border: 1px solid hsla(0, 0%, 91%, 1);
+  box-shadow: 0px 0px 8px 0px hsla(0, 0%, 0%, 0.12);
+  border-radius: 4px;
+
+}
+
+#contents #discussion .questions-content {
+  padding-inline: 2.4rem;
+  padding-top: 1.7rem;
+}
+
+#contents #discussion .questions h4 {
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  color: var(--orange);
+}
+
+#contents #discussion .questions .name {
+  font-family: 'Quicksand';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#contents #discussion .questions .content {
+  padding-top: 1rem;
+
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+#contents #discussion .questions .questions-buttons {
+  display: flex;
+  gap: 1.5rem;
+  padding-inline: 2.4rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.8rem;
+}
+
+#contents #discussion .questions .questions-buttons button {
+  border: none;
+}
+#contents #discussion .questions .questions-buttons p {
+  font-family: 'Segoe UI';
+  font-weight: 350;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  
+  color: hsl(0, 0%, 46%);
 }
