@@ -1,4 +1,6 @@
 /* ============ GERAL ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
   margin: 0;
@@ -11,11 +13,8 @@
   --light-grey: hsla(0, 0%, 93%, 1);
   --orange: hsla(21, 83%, 58%, 1);
 
-
-
   font-size: 62.5%; /* 1rem == 10px */
 }
-
 
 .wrapper {
   width: 84%;
@@ -25,23 +24,33 @@
   padding-right: 2.3%;
 }
 
-html, 
+.wrapper-header {
+  width: 84%;
+  height: 100%;
+  margin-left: 16%;
+}
+
+html,
 body {
   height: 100%;
   width: 100%;
-  
 }
 
 /* ============ SIDEBAR ==================== */
 
 #sidebar {
-  border: 1px solid lightgray;
   width: 16%;
   height: 100%;
 
   position: fixed;
 }
 
+#sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+}
 
 #sidebar .title h1 {
   width: 100%;
@@ -49,28 +58,31 @@ body {
   padding-right: 2.2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  
- 
-  background: linear-gradient(180deg, hsl(33, 100%, 66%) 0%, hsl(21, 84%, 58%) 100%);
+
+  background: linear-gradient(
+    180deg,
+    hsl(33, 100%, 66%) 0%,
+    hsl(21, 84%, 58%) 100%
+  );
   color: white;
-  
+
   font-family: 'Roboto';
   font-weight: 700;
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
-#sidebar .menu img {
+#sidebar .sidebar-img img {
   width: 100%;
 }
 
 #sidebar ul li {
+  width: 100%;
   font-family: 'Quicksand';
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.9rem;
 
-  padding-left: 2.4rem;
   padding-bottom: 0.9rem;
   margin-bottom: 0.9rem;
 
@@ -79,25 +91,29 @@ body {
 
 /* ============ MAIN (HEADER) ==================== */
 
-#main header {
-  width: 84%;
+#main header,
+.teste {
+  width: 100%;
   padding: 0.2rem;
 
   background: var(--light-orange);
 
   display: flex;
   align-items: center;
-  gap: 3rem;
-  margin-left: 16%;
+  justify-content: space-between;
 
-  padding-left: 3.6rem ;
-
+  padding-left: 3.6rem;
 }
 
 #main header h3 {
   font-family: 'Roboto';
   font-size: 2.2rem;
   font-weight: 400;
+}
+
+#main header .language {
+  width: auto;
+  height: auto;
 }
 
 #main header p.one {
@@ -124,17 +140,24 @@ body {
 }
 
 #main .profile {
+  font-family: 'Quicksand';
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  margin-left: 2.2rem;
   margin-right: 5rem;
 }
 
-#main .texto {
+#main #text {
+  width: 90%;
   display: flex;
   flex-direction: column;
 }
 
-#main p.two {
+#main p.welcome {
   text-align: end;
 }
 
@@ -152,39 +175,44 @@ body {
   line-height: 2.5rem;
   letter-spacing: 0.05rem;
   color: var(--orange);
-  width: 98%;
+  width: 90%;
+}
 
-  
+#sub-header .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 #sub-header .buttons {
   display: flex;
-  align-items: center;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
   gap: 0.5rem;
-
-
- 
-  padding-right: 4.5rem;
-
 }
 
-#sub-header span p {
+#sub-header .quote-work {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#sub-header span {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  text-align: center;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 
   color: var(--orange);
-
 }
-
-
 
 #sub-header button {
   border: 0;
@@ -201,7 +229,9 @@ body {
   width: 100%;
 }
 
-
+#contents .video-container img {
+  width: 100%;
+}
 
 #contents .details {
   font-family: 'Quicksand';
@@ -210,39 +240,34 @@ body {
   line-height: 1.4rem;
   letter-spacing: 0.02rem;
 
-
   border: 1px solid var(--light-grey);
   width: 25%;
-  
 
   display: flex;
   flex-direction: column;
-
 }
 
-#contents .details h3 {
+#contents .block-title-text h3 {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 2rem;
   line-height: 2.5rem;
   color: hsl(0, 0%, 36%);
-  
   padding-left: 1.5rem;
   padding-block: 1.1rem;
-  
-  border: 1px solid var(--light-grey) ;
+  border: 1px solid var(--light-grey);
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
-
   background: var(--light-orange);
 }
 
-#contents .details p, ul {
+#contents .details p,
+ul {
   padding: 1.9rem;
 }
 
 /* ============ CONTENTS - RESUME ==================== */
 
-#contents #resume {
+#contents .content-container {
   width: 100%;
   height: auto;
 
@@ -251,16 +276,14 @@ body {
 
   display: flex;
   flex-direction: column;
-  
-  
+
   border: 1px solid var(--light-grey);
   border-radius: 3px 3px 0px 0px;
-
 }
 
 #contents .index {
   background-color: var(--light-orange);
-  border: 1px solid var(--light-grey); 
+  border: 1px solid var(--light-grey);
 }
 
 #contents #resume span h3 {
@@ -271,10 +294,10 @@ body {
 
   padding-inline: 1.5rem;
   padding-block: 1rem;
-  
 }
 
 #contents .resume-content {
+  width: 100%;
   font-family: 'Quicksand';
   font-weight: 400;
   font-size: 1.4rem;
@@ -290,26 +313,15 @@ body {
 
 /* ============ CONTENTS - DISCUSSION ==================== */
 
-#contents #discussion {
-  margin-top: 3rem;
-  border: 1px solid var(--light-grey);
-  border-radius: 3px 3px 0px 0px;
+#contents #discussion .share-questions {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
 }
 
-#contents #discussion span h3 {
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 2.5rem;
-
-  padding-inline: 1.5rem;
-  padding-block: 1rem;
-
-  background: var(--light-orange);
-  border: 1px solid var(--light-grey);
-}
-
-#contents #discussion .p1 {
+#contents #discussion .share-questions-text {
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 1.8rem;
@@ -322,7 +334,22 @@ body {
   color: var(--orange);
 }
 
-#contents #discussion .p2 {
+#contents #discussion .figures {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  padding-top: 2.7rem;
+}
+
+#contents #discussion .cientific-development {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+
+#contents #discussion .cientific-development-text {
   font-family: 'Quicksand';
   font-weight: 400;
   font-size: 1.4rem;
@@ -330,28 +357,26 @@ body {
   text-align: center;
 
   padding-top: 3.5rem;
-  padding-inline: 21.6rem;
 }
 
-#contents #discussion .figures {
+#contents #discussion .separation-line {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 5rem;
+  width: 95%;
+  border: 1px solid #e7e7e7;
+  height: 1px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
 
-  padding-top: 2.7rem;
+#contents #discussion .topic-button {
+  position: absolute;
 }
 
 #contents #discussion .topic-button button {
-  border: none;
-
-
-  padding-block: 1.5rem;
-  padding-inline: 46.3rem;
-}
-
-#contents #discussion .line {
-  margin-inline: 1.5rem;
-  border: 1px solid red;
+  border: 0;
 }
 
 #contents #discussion .questions {
@@ -360,7 +385,6 @@ body {
   border: 1px solid hsla(0, 0%, 91%, 1);
   box-shadow: 0px 0px 8px 0px hsla(0, 0%, 0%, 0.12);
   border-radius: 4px;
-
 }
 
 #contents #discussion .questions-content {
@@ -372,7 +396,7 @@ body {
   font-family: 'Quicksand';
   font-weight: 700;
   font-size: 1.6rem;
-  line-height: 2.0rem;
+  line-height: 2rem;
   color: var(--orange);
 }
 
@@ -408,12 +432,13 @@ body {
   font-weight: 350;
   font-size: 1.4rem;
   line-height: 1.9rem;
-  
+
   color: hsl(0, 0%, 46%);
 }
 
+/* ============ FOOTER ==================== */
+
 footer img {
-  padding-left: 1.4rem;
-  margin-left: 16%;
-  margin-top: 5rem;
+  margin: 0%;
+  width: 100%;
 }

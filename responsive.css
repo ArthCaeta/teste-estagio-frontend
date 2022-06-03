@@ -1,0 +1,72 @@
+/* ============ RESPONSIVE ==================== */
+
+@media (max-width: 1310px) {
+  /* ============ GERAL ==================== */
+
+  #contents .info-wrapper {
+    flex-direction: column;
+  }
+
+  #contents .video-container img {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  #contents .details {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  footer img {
+    margin: 0%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #sidebar .title h1 {
+    font-size: 2rem;
+  }
+
+  #sidebar ul li {
+    font-size: 1.5rem;
+  }
+
+  #main header {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1rem;
+  }
+
+  #main header .teste {
+    display: flex;
+    justify-content: space-between;
+
+    padding-inline: auto;
+  }
+
+  #main header .one {
+    font-size: 1.4rem;
+  }
+
+  #main header .two {
+    font-size: 2.5rem;
+  }
+
+  #main header .three {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 950px) {
+  #sub-header span {
+    margin: 0;
+  }
+
+  #sub-header .text2 h2 {
+    font-size: 1.5rem;
+  }
+}
