@@ -34,13 +34,6 @@
     font-size: 1.5rem;
   }
 
-  #main header {
-    display: flex;
-    flex-direction: column;
-
-    padding-left: 1rem;
-  }
-
   #main header .teste {
     display: flex;
     justify-content: space-between;
@@ -48,16 +41,32 @@
     padding-inline: auto;
   }
 
-  #main header .one {
-    font-size: 1.4rem;
+  .header-text .one {
+    font-size: 1rem;
   }
 
-  #main header .two {
-    font-size: 2.5rem;
+  .header-text .two {
+    font-size: 1.5rem;
   }
 
-  #main header .three {
-    font-size: 1.4rem;
+  .header-text .three {
+    font-size: 0.8rem;
+  }
+
+  .welcome-block {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .welcome-block .welcome-text {
+    margin-top: 1.2rem;
+  }
+
+  .welcome-block img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-top: 2rem;
   }
 }
 
@@ -68,5 +77,34 @@
 
   #sub-header .text2 h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sidebar-dummy {
+    width: 0;
+    height: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+  }
+
+  #main .center {
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper-header {
+    width: 100%;
   }
 }

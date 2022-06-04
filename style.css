@@ -16,18 +16,15 @@
   font-size: 62.5%; /* 1rem == 10px */
 }
 
-.wrapper {
-  width: 84%;
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
   height: 100%;
-  margin-left: 16%;
-  padding-left: 2.3%;
-  padding-right: 2.3%;
-}
-
-.wrapper-header {
-  width: 84%;
-  height: 100%;
-  margin-left: 16%;
+  padding-left: 2%;
+  padding-right: 3.5%;
 }
 
 html,
@@ -38,21 +35,37 @@ body {
 
 /* ============ SIDEBAR ==================== */
 
-#sidebar {
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100vw;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 16%;
   height: 100%;
-
+  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
   position: fixed;
 }
 
-#sidebar .menu {
+.sidebar .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
 }
 
-#sidebar .title h1 {
+.sidebar .sidebar-title {
+  width: 100%;
+}
+
+.sidebar .sidebar-title h1 {
   width: 100%;
   padding-left: 2rem;
   padding-right: 2.2rem;
@@ -72,11 +85,12 @@ body {
   line-height: 3rem;
 }
 
-#sidebar .sidebar-img img {
+.sidebar .sidebar-img img {
   width: 100%;
+  padding: 1.5rem;
 }
 
-#sidebar ul li {
+.sidebar ul li {
   width: 100%;
   font-family: 'Quicksand';
   font-weight: 500;
@@ -89,76 +103,87 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 
+/* ============ CENTER ==================== */
+
+.sidebar-dummy {
+  width: 16%;
+  height: 100px;
+}
+
+#main .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 84%;
+  height: 100%;
+}
+
 /* ============ MAIN (HEADER) ==================== */
 
-#main header,
-.welcome-block {
-  width: 100%;
-  padding: 0.2rem;
-
-  background: var(--light-orange);
-
+.wrapper-header {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  padding-left: 3.6rem;
+  width: 100%;
+  padding: 1rem;
+  background: var(--light-orange);
 }
 
-#main header h3 {
+.header-text {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text h3 {
   font-family: 'Roboto';
   font-size: 2.2rem;
   font-weight: 400;
 }
 
-#main header .language {
-  width: auto;
-  height: auto;
-}
-
-#main header p.one {
+.header-text p.one {
   font-family: 'Roboto';
   font-size: 1.4rem;
   line-height: 1.6rem;
-
-  padding-top: 0.5rem;
-  padding-bottom: 0.2rem;
 }
-#main header p {
+
+.header-text p {
   font-family: 'Roboto';
   font-size: 1.4rem;
   line-height: 1.6rem;
-
-  padding-bottom: 0.4rem;
 }
 
-#main .profile img {
+.welcome-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+  padding: 1rem;
+}
+
+.welcome-block img {
   width: 3.5rem;
   height: 3.5rem;
-  margin-left: 0.5rem;
   border-radius: 50%;
 }
 
-#main .profile {
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.welcome-text p {
+  text-align: left;
   font-family: 'Quicksand';
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.5rem;
-
-  display: flex;
-  justify-content: center;
-  margin-left: 2.2rem;
-  margin-right: 5rem;
-}
-
-#main #text {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}
-
-#main p.welcome {
-  text-align: end;
 }
 
 /* ============ SUB-HEADER ==================== */
